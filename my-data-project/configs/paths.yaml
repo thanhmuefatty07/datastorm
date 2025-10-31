@@ -1,0 +1,4 @@
+data:
+  raw_dir: "data/raw/Dunnhumby"
+  interim_dir: "data/interim"
+  processed_dir: "data/processed"

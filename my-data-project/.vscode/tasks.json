@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "W4: Clean (apply)",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "${workspaceFolder}/src/w4/cleaning/clean_w4.py"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "W4: Build Features",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "${workspaceFolder}/src/w4/features/build_w4_features.py"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}

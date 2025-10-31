@@ -1,0 +1,19 @@
+﻿.venv/
+data/raw/
+data/interim/
+data/processed/
+reports/
+.ipynb_checkpoints/
+.DS_Store
+
+# Data files
+*.parquet
+*.duckdb
+*.feather
+
+# Python noise
+__pycache__/
+*.pyc
+
+# Additional OS
+Thumbs.db
