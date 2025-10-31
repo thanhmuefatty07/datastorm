@@ -1,19 +1,26 @@
-﻿.venv/
-data/raw/
-data/interim/
-data/processed/
-reports/
+﻿# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
 .ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# VS Code / OS
+.vscode/
 .DS_Store
 
-# Data files
-*.parquet
+# Data & artifacts
+data/
 *.duckdb
-*.feather
+*.db
+*.sqlite
+logs/
+reports/plots/
+artifacts/
 
-# Python noise
-__pycache__/
-*.pyc
-
-# Additional OS
-Thumbs.db
+# Build
+dist/
+build/
