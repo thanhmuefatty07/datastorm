@@ -1,0 +1,44 @@
+# Dunnhumby Dataset Configuration
+# This configuration is specific to the Dunnhumby Complete Journey dataset
+# and can be easily replaced when switching to other datasets
+
+data:
+  raw_dir: "data/raw/Dunnhumby"
+  interim_dir: "data/interim"
+  processed_dir: "data/processed"
+
+# Dataset-specific settings
+dataset:
+  name: "Dunnhumby Complete Journey"
+  version: "1.0"
+  description: "Complete customer journey dataset from Dunnhumby"
+  
+  # Expected files in raw directory
+  required_files:
+    - "campaign_desc.csv"
+    - "campaign_table.csv"
+    - "causal_data.csv"
+    - "coupon.csv"
+    - "coupon_redempt.csv"
+    - "hh_demographic.csv"
+    - "product.csv"
+    - "transaction_data.csv"
+  
+  # Data validation settings
+  validation:
+    check_referential_integrity: true
+    allow_missing_values: true
+    validate_data_types: true
+
+# Processing settings specific to Dunnhumby
+processing:
+  sample_size: 200000
+  chunk_size: 10000
+  memory_limit_gb: 8
+  
+  # Dunnhumby-specific cleaning options
+  cleaning:
+    extract_datetime_features: true
+    calculate_derived_metrics: true
+    handle_promotional_data: true
+    validate_week_numbers: true
